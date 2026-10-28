@@ -1,5 +1,4 @@
 
-
 import streamlit as st
 from PIL import Image
 from pathlib import Path
@@ -536,6 +535,12 @@ elif pagina == "Nueva evaluación":
             type=["jpg", "jpeg", "png"],
             accept_multiple_files=True
         )
+         
+         fotografias = st.file_uploader(
+             "Fotografía Vista aérea",
+             type=["jpg", "jpeg", "png"],
+             accept_multiple_files=True
+             )
     
     with col2:  
     
@@ -563,7 +568,7 @@ elif pagina == "Nueva evaluación":
                 accept_multiple_files=True
             )
          fotografias = st.file_uploader(
-                         "Fotografía Vía aérea",
+                         "Fotografía Frontal",
                          type=["jpg", "jpeg", "png"],
                          accept_multiple_files=True
                      )
@@ -593,6 +598,12 @@ elif pagina == "Nueva evaluación":
                 type=["jpg", "jpeg", "png"],
                 accept_multiple_files=True
             )
+         
+         fotografias = st.file_uploader(
+             "Fotografía No. de Serie",
+             type=["jpg", "jpeg", "png"],
+             accept_multiple_files=True
+             )
     
     
     
@@ -1256,3 +1267,4 @@ elif pagina == "Configuración":
     st.write("Sistema: ReedHycalog")
     st.write("Versión: Prototipo inicial")
     st.write("Estado: En desarrollo")
+
